@@ -1,0 +1,25 @@
+#container{
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    display: grid;
+    /*grid-template-columns: 80px 80px 80px 80px; divides columns with fixed length visible using inspect
+    grid-template-rows: 60px 60px 60px 60px;divides rows with fixed length visible using inspect */
+    grid-template-rows: repeat(5 , 1fr); /* divides rows with equal container sizes */
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 30px; /* for both row and column gap we can use grid-gap:10px 10px; */
+    place-self:end;
+}
+
+.item {
+    height: 50px;
+    width: 50px; 
+    border: 2px solid black;
+    text-align: center;
+    background-color: greenyellow;
+}
+
+.one{
+    grid-column: 1/3 ;
+}
