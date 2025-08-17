@@ -61,7 +61,35 @@ console.log(newMsg);
 let name ="apnacollage";
 console.log(name.slice(4).replace("l","t"));
 
+// let start = ["January","July","March","August"];
+// start[0]="July";
+// start[1]="June";
+// console.log(start);
+
+
+// console.log(start.indexOf("june"));
+
 let start = ["January","July","March","August"];
-start[0]="July";
-start[1]="June";
+// start.splice(0,1);              //january deleted
+// start.splice(1,0,"June") or    // june added in b/w july and march   
+start.splice(0,2,"July","June")
 console.log(start);
+
+let language = ["c","c++","html","javascript","python","java","c#","sql"];
+// language.reverse(); or we can do method chaning
+console.log(language.reverse().indexOf("javascript"));
+
+let array1 = [["X",null,"O"],
+              [null,"X",null],
+              ["O",null,"X"]];
+console.log(array1);
+array1[0][1]="O";
+console.log(array1);
+
+let n=[7,9,0,-2];
+n.splice(3);
+console.log(n);
+
+let n1=[7,9,0,-2];
+n1.splice(0,1);
+console.log(n1);

@@ -174,3 +174,9 @@ console.log("indexOf('c')): "+msg.indexOf("c"));
 let name = ["BMW","Audi","LandRover"];
 name.push("Abc");
 name.pop();
+
+
+let start = ["January","July","March","August"];
+start[0]="July";
+start[1]="June";
+console.log("vhh"start.indexOf("July"));
