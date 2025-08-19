@@ -168,6 +168,7 @@ console.log("replace('o','x'): "+msg.replace("o","x")); //first o will be replac
 console.log("replace('love','do' ): "+msg.replace("love","do"));
 console.log("repeat(2)): "+msg.repeat(2));
 console.log("indexOf('c')): "+msg.indexOf("c"));
+console.log("includes('c')): "+msg.includes("c"));
 
 //Array
 
@@ -179,4 +180,61 @@ name.pop();
 let start = ["January","July","March","August"];
 start[0]="July";
 start[1]="June";
-console.log("vhh"start.indexOf("July"));
+console.log("vhh"+ start.indexOf("July"));
+console.log("includes('c')): "+msg.includes("c"));
+
+//concatenation  (merge 2 array) and reverse (changes origianl array)
+
+let primary = ["red","blue","orange"];
+let secondary = ["voilet","purple","green"];
+let allcolors = primary.concat(secondary);
+console.log("concatenated array: "+ allcolors);
+primary.reverse();
+console.log("reversed array: "+primary);
+
+//Array methods
+let colors =["red","blue","orange","voilet","purple","green"];
+colors.splice(4); // purple,green deleted
+console.log(colors); // red,blue,orange,voilet
+colors.splice(0,1);// red deleted
+console.log(colors); // blue,orange,voilet
+colors.splice(0,1,"black","yellow") // blue deleted
+console.log(colors); // black,yellow,orange,voilet
+colors.splice(1,0,"pink") // pink will be added b/w black and yellow
+console.log(colors); // black,pink,yellow,orange,voilet
+colors.sort();
+console.log(colors);
+
+//constant 
+const arr =[1,2,3];
+arr.push(4); // 1,2,3,4
+arr.pop(); // 1,2,3
+//arr = [1,2,3,4]; // VM1261:4 Uncaught TypeError: Assignment to constant variable. at <anonymous>:212
+
+let fruits = ["mango","apple","litchi","banana"];
+// for(let i=0;i<fruits.length;i++){
+//     console.log(i,fruits[i]);
+// }
+for(let i=fruits.length-1;i>=0;i--){
+    console.log(i,fruits[i]);
+}
+
+let heros = [
+    ["ajay","akshay","ranveer"],
+    ["salman","sarukh","saif"]
+];
+
+for(let i=0;i<heros.length;i++){
+    console.log("actors"+i)
+    for(let j=0;j<heros[i].length;j++){
+        console.log(j,heros[i][j]);
+    }
+}
+
+let det = [["akshay",56],["aman",76],["sky",68]];
+for(let i=0;i<det.length;i++){
+    console.log(`students ${i+1}`);
+    for(let j=0;j<det[i].length;j++){
+        console.log(j,det[i][j]);
+    }
+}
