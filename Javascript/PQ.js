@@ -93,3 +93,46 @@ console.log(n);
 let n1=[7,9,0,-2];
 n1.splice(0,1);
 console.log(n1);
+
+let arr2=[1,2,3,4,5,6,2,3];
+let num2 =2;
+for(let i=0;i<arr2.length;i++){
+    if(num2 == arr2[i]){
+        arr2.splice(i,1)
+    }
+}
+console.log(arr2);
+
+let num1= 287152;
+let count = 0;
+
+while(num1>0){
+    num1 = Math.floor(num1/10);
+    count++;
+}
+console.log(count);
+
+num1 = 287152;
+let sum = 0;
+while(num1>0){
+    digit = num1 % 10;
+    sum += digit;
+    num1 = Math.floor(num1/10);
+}
+console.log(sum);
+
+let n3 = 5;
+let fact = 1;
+for(let i=1;i<=n3;i++){
+    fact = fact * i;
+}
+console.log(fact);
+
+let num3 = [2,5,10,4,2,7,1,9];
+let largest = 0;
+for(let i=0;i<num3.length;i++){
+    if(largest < num3[i]){
+        largest = num3[i];
+    }
+}
+console.log(largest);
