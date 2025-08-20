@@ -238,3 +238,77 @@ for(let i=0;i<det.length;i++){
         console.log(j,det[i][j]);
     }
 }
+
+//Object Literals
+const post = {
+    username: "@ashutosh",
+    content: "This is my first post",
+    likes: 150,
+    repost: 3,
+    tags: ["@ashu","@skills"]
+};
+console.log(post);
+post.content; // to see the values
+post["username"]; // to see the values
+
+const student ={
+    name:"Ashutosh",
+    age: 21,
+    marks:87,
+    city:"Mumbai"
+};
+student.city = "Delhi"; // change key value
+student.gender = "M"; //to add a property
+student.height = "172cm"; //to add a property
+console.log(student);
+delete student.height; // to delete a property
+console.log(student);
+
+
+//nested object literals
+const classInfo ={
+    aman:{
+        grade:"C",
+        city:"Mumbai"
+    },
+    sahil:{
+        grade:"B",
+        city:"Pune"
+    },
+    saksham:{
+        grade:"A",
+        city:"Delhi"
+    }
+}
+
+classInfo.saksham.city = "Muzaffarpur";
+
+//Array of object
+let info =[
+    {
+        name:"Ashutosh",
+        age:20
+    },
+    {
+        name:"Aman",
+        age:19    
+    }
+];
+info[0].name; //to check the name of index 0
+info[1].age =18; //to change the age of aman
+info[1].gender="F"; //to add property to index 1
+
+//generate random no b/w 1 to 10
+let random = Math.random();
+random = random *10; // step by step
+random = Math.floor(random); //  it will generate b/w 0-9
+random = random + 1; // now it will generate b/w 0-10
+console.log(random);
+let r = Math.floor(Math.random()*10) + 1; // in one line of code
+console.log(r);
+
+//generate random number b/w 20-25
+let r1= Math.floor(Math.random()*5) +20;
+console.log(r1);
+
+//generate random number b/w 0 - 100

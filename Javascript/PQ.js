@@ -136,3 +136,24 @@ for(let i=0;i<num3.length;i++){
     }
 }
 console.log(largest);
+
+//v-23 q1
+let dice = Math.floor(Math.random()*6) + 1;
+console.log(dice);
+//q2
+const car = {
+    name:"S-cross zeta Maruti Suzuki",
+    model:2013,
+    color:"grey"
+};
+console.log(car);
+//q3
+const person ={
+    name:"Ashutosh",
+    age:22,
+    city:"Banglore"
+};
+console.log(person);
+person.city ="New York";
+person.country ="US";
+console.log(person);
