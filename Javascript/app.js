@@ -311,4 +311,149 @@ console.log(r);
 let r1= Math.floor(Math.random()*5) +20;
 console.log(r1);
 
-//generate random number b/w 0 - 100
+//Function
+function isAdult(){
+    let age =19;
+    if(age>=18){
+        console.log("Is Adult");
+    }
+    else{
+        console.log("Not Adult")
+    }
+}
+isAdult();
+
+function rollDice(){
+    let r3= Math.floor(Math.random()*6) +1;
+    console.log(r3);
+}
+rollDice();
+
+//Function with arguments
+function infoD(name,age){
+    console.log(`${name}'s age is ${age}. `);
+}
+infoD("Aman",19)
+
+function average(a,b,c){
+    let avg = (a+b+c)/3
+    console.log(avg);
+}
+average(1,3,3);
+
+function table(n){
+    for(let i=1;i<=10;i++){
+        t = i*n;
+        console.log(t);
+    }
+}
+table(12);
+
+function sum(n){
+    let s =0;
+    for(let i=1;i<=n;i++){
+        s = s+i;
+    }
+    return s;
+}
+// console.log(sum(4));
+
+let str1=["hi","hello","by"] //global scope 
+function concat(str1){
+    let result = ""; //function scope
+    for(let i=0;i<str1.length;i++){
+        result += str1[i];
+    }
+    return result;
+}
+concat(str1);
+
+let greet = "hello";
+function outergreet(){
+    let greet = "namaste";
+    console.log(greet);
+    function innergreet(){
+        console.log(greet);
+    }
+}
+console.log(greet);
+outergreet();
+
+let calculate = {
+    add: function(a,b){
+        return a+b;
+    },
+    sub: function(a,b){
+        return a-b;
+    },
+    mul: function(a,b){
+        return a*b;
+    },
+    div: function(a,b){
+        return a/b;
+    }
+}
+calculate.add(3,4);
+
+//this key word
+let info1 = {
+    name:"aman",
+    age:21,
+    eng:67,
+    math:87,
+    sci:94,
+    getavg(){
+        let avg =(this.eng+this.math+this.sci)/3;
+        console.log(`${this.name} got avg marks ${avg}.`)
+    }
+};
+info1.getavg();
+
+//try catch
+console.log("hello");
+console.log("hello");
+try{
+    console.log(a);
+} catch(err){
+    console.log("a does n't exist");
+    console.log(err);
+}
+
+console.log("namaste");
+console.log("namaste");
+console.log("namaste");
+
+//arrow fn
+let sum1=(a,b) =>{
+    console.log(a+b);
+}
+sum1(2,4);
+//implicit return arrow fn 
+let sum2=(a,b) =>(a+b);
+sum2(2,5);
+
+//set timeout
+console.log("hii there");
+setTimeout(() =>{
+    console.log("my website") //setTimeout(fn,timeout)
+},4000)
+console.log("welcome to")
+
+//setinterval
+console.log("hii there");
+let id1 =setTimeout(() =>{
+    console.log("my website") //setTimeout(fn,timeout)
+},4000)
+let id2= setInterval(()=>{
+    console.log("created by Ashutosh") //clearInterval(id2) to stop the interval
+},9000)
+console.log("welcome to")
+
+let id = setInterval(()=>{
+    console.log("hello World")
+},2000)
+
+setTimeout(()=>{
+    clearInterval(id);
+    console.log("clearInterval ran")
+},10000)
