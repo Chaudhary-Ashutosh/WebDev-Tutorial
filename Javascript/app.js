@@ -287,11 +287,13 @@ classInfo.saksham.city = "Muzaffarpur";
 let info =[
     {
         name:"Ashutosh",
-        age:20
+        age:20,
+        marks:86
     },
     {
         name:"Aman",
-        age:19    
+        age:19, 
+        marks:97   
     }
 ];
 info[0].name; //to check the name of index 0
@@ -432,6 +434,7 @@ sum1(2,4);
 let sum2=(a,b) =>(a+b);
 sum2(2,5);
 
+/* 
 //set timeout
 console.log("hii there");
 setTimeout(() =>{
@@ -456,4 +459,84 @@ let id = setInterval(()=>{
 setTimeout(()=>{
     clearInterval(id);
     console.log("clearInterval ran")
-},10000)
+},10000) */
+
+//Array Methods
+//1.for each method
+let num3=[1,2,3,4,5];
+num3.forEach((el)=>{
+    console.log(el);
+});
+num3.forEach(function(el){
+    console.log(el);
+});
+//2.map
+let double = num3.map(function(el){
+    return el*2;
+});
+
+let square = num3.map((el)=>{
+    return el*el;
+});
+
+let cgpa = info.map((el)=>{
+    return el.marks/10;
+})
+//3.filter
+let ans = num3.filter((el)=>{
+    return el%2!==0;
+})
+//4.every same as AND 
+num3.every((el)=> el>11); //true
+//5.some same as or
+num3.every((el)=> el>11); 
+//6.reduce
+num3.reduce((result,el)=>(result+el)); //15
+let max = num3.reduce((max,el)=>{
+    if(el>max){
+     return el;  
+    }
+    else{
+        return max;
+    }
+});
+console.log(max); //5
+
+let min = num3.reduce((min,el)=>{
+    if(el<min){
+     return el;  
+    }
+    else{
+        return min;
+    }
+});
+console.log(min); //1
+
+let num4 = [10,20,30,40];
+num4.every((el)=> el%10==0); //true
+num4.filter((el)=> el%10==0); //10 20 30 40
+
+
+//spread
+Math.min(...num4); //10
+
+console.log(..."apnacollage"); // a p n a c o l l a g e
+console.log("apnacollage"); //apnacollage
+
+let odd = [1,3,5,7];
+let even =[2,4,6,8,10];
+console.log(...even,...odd);
+
+//destructure
+let names = ["Amit","Ansh","Priya"];
+let [first, second, third] = names;
+
+
+let student1 = {
+    name:"Daksh",
+    age:21,
+    username:"ahcb@12"
+
+}
+let {username, age , city="Mumbai"} =student1; //age 21
+let {username:user, age:secret} =student1; //secret 21
