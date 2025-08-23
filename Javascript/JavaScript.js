@@ -50,3 +50,38 @@ console.log(img1.setAttribute("id","image1"));
 console.log(img1.getAttribute("class"));// image { bcz class name has been changed using set attribute from img to image}
 
 let imgheading = document.querySelectorAll("h3");
+console.log(imgheading);
+
+//heading.style.color = "red";
+//heading.style.backgroundColor = "black";
+
+let links = document.querySelectorAll('.box a');
+for(let i=0;i<links.length;i++){
+    links[i].style.color = "green";
+}
+
+heading.classList.add('green'); //heading in green colour
+heading.classList.contains("green"); // true
+//heading.classList.remove('green'); // remove green color
+heading.classList.contains("underline"); // false
+heading.classList.toggle("underline") // it will add underline if not added or it will remove if previously added. ans give true.
+heading.parentElement; //body 
+
+let imgcoll = document.querySelector('.box')
+imgcoll.children; //h3 img p
+imgcoll.childElementCount; //3
+img1.previousElementSibling; //h3
+img1.nextElementSibling; //p
+
+document.createElement('p');
+let newpara = document.createElement('p');
+let body = document.querySelector('body');
+body.appendChild(newpara); // appends in child element
+newpara.innerText= "Hi i am the new paraghraph.";
+newpara.append(" This is new p append"); // append in the same element in the last
+newpara.prepend("I am prepend. <br> ") // prepend add in the same element in the first
+
+let btn = document.createElement('button');
+btn.innerHTML = "NEW BUTTON"
+let p = document.querySelector('p');
+p.insertAdjacentElement('afterbegin',btn); 
