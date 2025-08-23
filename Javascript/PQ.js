@@ -157,3 +157,9 @@ console.log(person);
 person.city ="New York";
 person.country ="US";
 console.log(person);
+
+//v-26
+//q1
+let arr3 = [1,2,3,4,5];
+arr3.forEach((el)=>el*el);
+let sum3 = arr3.reduce((rel,el)=> rel+el);
