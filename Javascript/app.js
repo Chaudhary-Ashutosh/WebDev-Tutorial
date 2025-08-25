@@ -540,3 +540,69 @@ let student1 = {
 }
 let {username, age , city="Mumbai"} =student1; //age 21
 let {username:user, age:secret} =student1; //secret 21
+
+// let btns = document.querySelectorAll('.btn');
+// console.dir(btns);
+// function hello(){
+//     console.log("hellow");
+// };
+// function mouse(){
+//   console.log("Hovered");
+// }
+
+// for(let btn of btns){
+//   // btn.onmouseenter = function (){
+//   //   console.log("Hovered");
+//   //};
+//   //btn.onclick = hello;
+
+//   btn.addEventListener("click",hello);
+//   btn.addEventListener("click",function(){
+//      console.log(this.innertext)});// Click me
+//   btn.addEventListener("dblclick",
+//     function(){
+//       console.log("you double clicked");
+//     }
+//   );
+   
+// }
+
+let btn = document.querySelector("button");
+btn.addEventListener("click",function(){
+  let h3 = document.querySelector('h3');
+  let randomcolor = getRandomColor();
+  h3.innerText=randomcolor;
+
+  let div = document.querySelector("div");
+  div.style.background = randomcolor;
+  console.log("color updated");
+
+  
+});
+let div1 = document.querySelector("div");
+div1.addEventListener("click",function(){
+  console.log("mouse inside the box/div.")}
+);
+function getRandomColor(){
+let red = Math.floor(Math.random()*255);
+let green = Math.floor(Math.random()*255);
+let blue = Math.floor(Math.random()*255);
+let color =`rgb(${red},  ${green}, ${blue})`;
+return color;
+}
+
+let input = document.querySelector("input");
+input.addEventListener("keydown",function(event){
+  // console.log(event);
+  console.log(event.key);
+  console.log(event.code); 
+})
+// input.addEventListener("keydown", function(){
+//   console.log("key was pressed")}
+// )
+// input.addEventListener("keyup", function(){
+//   console.log("key was released")}
+// )
+
+
+
