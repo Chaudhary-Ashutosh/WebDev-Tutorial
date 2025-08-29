@@ -605,4 +605,19 @@ input.addEventListener("keydown",function(event){
 // )
 
 
+let div1 = document.querySelector(".divul");
+let ul = document.querySelector("ul");
+let lis = document.querySelectorAll("li");
 
+div1.addEventListener("click",function(){
+    console.log("div was clicked");
+})
+ul.addEventListener("click",function(event){
+    event.stopPropagation();
+    console.log("ul was clicked");
+})
+for(li of lis){
+li.addEventListener("click",function(event){
+    event.stopPropagation();
+    console.log("li was clicked");
+})}

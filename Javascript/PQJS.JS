@@ -1,9 +1,9 @@
 let para1 = document.createElement('p');
 para1.innerText= "hii i am red";
 para1.style.color = "red";
-document.querySelector('body').append(para1);
+document.querySelector('body').append(para1); // to select the first body and append para1 in the body
 
-let h3 = document.createElement("h3");
+let h3 = document.createElement("h3"); // create a obj of of element h3
 h3.innerText = "Hi i'm blue";
 h3.style.color = "blue";
 document.querySelector("body").append(h3);
@@ -11,18 +11,19 @@ document.querySelector("body").append(h3);
 let div = document.createElement("div");
 let h1 = document.createElement("h1");
 let p = document.createElement("p");
-h1.innerText="I'm in a div";
+h1.innerText="I'm in a div"; //to display on web
 p.innerText="ME TOO";
-document.querySelector("body").prepend(div);
+document.querySelector("body").prepend(div); //append the div in the top of the body
 div.style.border = "2px solid black";
 div.style.background ="pink";
+
 document.querySelector("div").append(h1);
 document.querySelector("div").append(p);
 
 //v -27
 //q1
 let input = document.createElement('input');
-input.setAttribute("placeholder","username");
+input.setAttribute("placeholder","username"); // to set something
 document.querySelector("body").append(input);
 let btn1 = document.createElement("button");
 btn1.innerText = "click me";
@@ -105,3 +106,20 @@ input1.addEventListener("input",function(){
     console.log(input1.value);
     p2.innerText = input1.value;
 })
+
+let div1 = document.querySelector(".divul");
+let ul = document.querySelector("ul");
+let lis = document.querySelectorAll("li");
+
+div1.addEventListener("click",function(){
+    console.log("div was clicked");
+})
+ul.addEventListener("click",function(event){
+    event.stopPropagation();
+    console.log("ul was clicked");
+})
+for(li of lis){
+li.addEventListener("click",function(event){
+    event.stopPropagation();
+    console.log("li was clicked");
+})}
