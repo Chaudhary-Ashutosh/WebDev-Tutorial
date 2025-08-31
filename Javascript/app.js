@@ -605,11 +605,11 @@ input.addEventListener("keydown",function(event){
 // )
 
 
-let div1 = document.querySelector(".divul");
+let div2 = document.querySelector(".divul");
 let ul = document.querySelector("ul");
 let lis = document.querySelectorAll("li");
 
-div1.addEventListener("click",function(){
+div2.addEventListener("click",function(){
     console.log("div was clicked");
 })
 ul.addEventListener("click",function(event){
@@ -621,3 +621,44 @@ li.addEventListener("click",function(event){
     event.stopPropagation();
     console.log("li was clicked");
 })}
+
+//callstack
+function one(){
+    return 1;
+}
+function two(){
+    return one()+one();
+}
+function three(){
+    let ans = two() + one();
+    console.log(ans);
+}
+
+//callhell: loops inside loop
+//promise
+function saveToDb(data){
+    return new Promise((resolve,reject) => {
+        let internetSpeed = Math.floor(Math.random()*10)+1;
+        if(internetSpeed > 4){
+            resolve("sucsess: data was saved");
+        }
+        else{
+            reject("failure: week connnection");
+        }
+    });
+}
+saveToDb("hello")
+    .then((result) => {
+        console.log("data1 saved. ",result);
+        return saveToDb("world") // Handle successful resolution
+    })
+    .then((result2)=>{
+        console.log("data2 saved.",result2);
+        return saveToDb("I'm Back");
+    })
+    .then((result3)=>{
+        console.log("data3 saved. ",result3);
+    })
+    .catch((error) => {
+        console.error("Promise rejected:",error); // Handle the rejected promise
+    });
