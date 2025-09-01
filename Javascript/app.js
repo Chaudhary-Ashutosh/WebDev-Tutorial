@@ -662,3 +662,55 @@ saveToDb("hello")
     .catch((error) => {
         console.error("Promise rejected:",error); // Handle the rejected promise
     });
+
+    //async fn
+async function greet1() {
+    //throw("404 page not found");
+    return "hello";
+}
+
+greet1()
+    .then((result) =>{
+       console.log("promise was resolved");
+        console.log("result was: ",result);
+    })
+    .catch((err)=>{
+        console.log("promise was rejected with err: ",err);
+    });
+
+let heading = document.createElement("h1");
+heading.innerText = "Ashutosh";
+document.querySelector("body").prepend(heading);
+
+
+//Ashutosh change color
+function changeColor(color,delay){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let num = Math.floor(Math.random()*5)+1;
+            if(num > 3){
+                reject("promise rejected");
+            }
+
+            heading.style.color = color;
+            console.log(`color changed to ${color}`);
+            resolve("color changed"); 
+        },delay);
+    });   
+}
+//await
+async function demo(){
+    try {
+    await changeColor("red",500);
+    await changeColor("green",500);
+    await changeColor("orange",500);
+    await changeColor("purple",500);
+    changeColor("blue",500);
+    }catch(err){
+        console.log("error caught: ",err);
+    }
+    let a = 5;
+    console.log(a+5);
+    
+}
+demo();
