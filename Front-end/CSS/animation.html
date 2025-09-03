@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            background-color: pink;
+            width: 15px;
+            animation-name: boxlength;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0;
+            animation-iteration-count: 3;
+        }
+        @keyframes boxlength {
+            from { 
+                width: 15px;
+                background-color: aqua;
+            }
+            to { 
+                width: 400px;
+                background-color: blueviolet;
+            }            
+        }
+
+        @keyframes fontsize {
+            from{
+                font-size: 15px;
+            }
+            to {
+                font-size: 50px;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello friends </div>
+</body>
+</html>

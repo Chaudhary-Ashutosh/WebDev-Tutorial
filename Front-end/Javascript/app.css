@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+
+}
+
+div {
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.divul{
+    height: 200px;
+    width: 400px;
+    background-color: blue;
+}
+ul{
+    background-color: green;
+}
+li{
+    background-color: yellow;
+}
