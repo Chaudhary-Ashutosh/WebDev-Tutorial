@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "package.json for calculation",
+  "main": "calculation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashutosh",
+  "license": "ISC",
+  "type": "module"
+}
