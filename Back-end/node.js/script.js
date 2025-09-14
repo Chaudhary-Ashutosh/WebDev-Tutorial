@@ -1,22 +1,31 @@
-// let m = "message";
-// for(let i=1; i<6; i++){
-//     console.log(m, i);
+function add(a, b) {   
+  return a + b;
+}
+
+function sub(a, b) { 
+  return a - b;
+}
+
+function mul(a, b) { 
+  return a * b;
+}
+
+/* method 1 */ 
+module.exports = { add, sub, mul };
+
+/* method 2 'obj'*/
+// module.exports = {
+//   addfn:add,
+//   subfn:sub,
+//   mulfn:mul
 // }
-// console.log("Bye!")
 
-// //console.log(process.argv);
 
-// let args = process.argv;
-// for(let i=2; i<args.length; i++){
-//     console.log("hello to ",args[i]);
-// }
+//or simply we can write the whole code in just 3 lines and export it's value
+// exports.add = (a,b) => a + b;
+// exports.sub =(a,b) => a - b;
+// exports.mul =(a,b) => a * b;
 
-// const math = require("./math");
-// console.log(math);
-// console.log(math.sum(2,2));
-// console.log(math.mul(2,5));
-// console.log(math.PI);
-// console.log(math.g);
 
-const info = require("./Fruits");
-console.log(info);
+
+
