@@ -30,3 +30,9 @@
     2. import math from './math.js' ;
     and set "type":"module";
     or      "type":"commonJS";
+
+7. npm i -g nodemon 
+    - To install nodemon
+    - a tool for Node.js that automatically restarts your server whenever you make changes to your files.
+
+8. nodemon filename.js
