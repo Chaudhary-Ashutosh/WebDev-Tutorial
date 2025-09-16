@@ -1,5 +1,5 @@
 //console.log(process);
-//console.log(process.argv);
+console.log(process.argv[1]);
 /* const math = require("./script");
 console.log(math.add(2,4));
 console.log(math.mul(2,4));
@@ -23,3 +23,6 @@ console.log("CPU length:",os.cpus().length);
 
 const fruits = require("./practice");
 console.log("Fruits :",fruits.banana);
+
+const input = process.args[2];
+console.log("User input is: ",input);

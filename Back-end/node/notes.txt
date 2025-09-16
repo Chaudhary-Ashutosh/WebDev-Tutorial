@@ -1,0 +1,32 @@
+1. npm init -y
+    {
+    "name": "express",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+    }
+
+2. npm install 
+    - To install node modules.
+
+3. npm i express/{package_name}
+    - To install express/{package_name}.
+
+4 npm install -g figlet/{package_name}
+    - To install figlet/{package_name} for global
+
+5. const input = process.args[2];
+   console.log(input);
+    - For user Input
+
+6. Syntax
+    1. const math = require("/math);
+    2. import math from './math.js' ;
+    and set "type":"module";
+    or      "type":"commonJS";
