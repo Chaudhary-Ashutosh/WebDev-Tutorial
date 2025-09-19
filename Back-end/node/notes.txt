@@ -36,3 +36,6 @@
     - a tool for Node.js that automatically restarts your server whenever you make changes to your files.
 
 8. nodemon filename.js
+
+9. const path = require("path"); // nodemon __dirname index.js
+   app.set('foldeName', path.join(__dirname,'/folderName'));
